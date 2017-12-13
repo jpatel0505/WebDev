@@ -1,0 +1,48 @@
+<DOCTYPE html>
+
+    <html>
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+            
+        </script>
+        <script>
+          $(document).ready(function() {
+                    $.ajax({
+                        url:"https://data.cityofchicago.org/resource/cm53-g3up.json",
+                        success: function(result) {
+                            console.log(result); 
+                            var Output = "";
+                            
+                            $.each(results, function(index, value) {
+                             S("#results").append(value.location_address + " " + value.park_name);
+                             
+                                
+                            });
+                
+                
+                
+                        }
+                    });
+                });
+      
+        </script>
+    
+      
+    </head>
+
+    <body>
+
+        <div id="div1">
+            <h2>jQuery and APIs</h2>
+        </div>
+
+        <button>Events</button>
+        
+        <div id="results">
+            
+        </div>
+    </body>
+
+    </html>
+
