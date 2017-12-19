@@ -6,6 +6,11 @@
     ----------------------------------------------------------------- 
 
 
+Hello this is a new addition to see what happens. 
+Great Job! 
+
+
+
 Hi there! Welcome to Cloud9 IDE!
 
 To get you started, we included a small hello world application.
