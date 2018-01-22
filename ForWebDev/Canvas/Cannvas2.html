@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+var harm = {x: 50, y: 50, r: 5, speed: 1};
+
+function draw() {
+
+
+ctx.clearRect(0,0,canvas.width, canvas.height);
+
+harm.x = harm.x - (1*harm.speed);
+
+if (harm.x < 0) {
+  harm.x = harm.x + canvas.width;
+  harm.y = Math.random() * canvas.height;
+}
+
+
+ctx.fillStyle = "#FFdd00";
+ctx.fillRect(0,0,150,100);
+
+ctx.beginPath();
+ctx.arc(harm.x, harm.y, harm.r, 0, 2 * Math.PI);
+ctx.stroke();
+
+requestAnimationFrame(draw);
+}
+
+
+requestAnimationFrame(draw);
+
+</script>
+
+</body>
+</html>
